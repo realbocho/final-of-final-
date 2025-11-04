@@ -1,0 +1,15 @@
+*{box-sizing:border-box;font-family:Inter, Noto Sans KR, Arial, sans-serif}
+body{background:#f6f8fb;color:#172b4d;margin:0;padding:20px}
+.container{max-width:1200px;margin:0 auto;background:#fff;border-radius:8px;padding:20px;box-shadow:0 6px 22px rgba(15,23,42,0.08)}
+header h1{margin:0;font-size:24px}
+.controls{display:flex;flex-wrap:wrap;gap:12px;margin-top:16px}
+.controls>div{display:flex;flex-direction:column;min-width:140px}
+.controls label{font-size:13px;color:#5b6b7a;margin-bottom:6px}
+.controls input, .controls select{padding:8px;border:1px solid #e3e8ef;border-radius:6px}
+.buttons{display:flex;gap:8px;align-items:flex-end}
+.buttons button{padding:8px 12px;border:none;border-radius:6px;background:#2563eb;color:#fff;cursor:pointer}
+.outputs{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}
+.chart{background:#fff;padding:10px;border-radius:6px;min-height:360px}
+.summary{grid-column:span 2;padding:10px}
+footer{margin-top:18px;color:#8898a6;font-size:13px}
+@media(max-width:900px){.outputs{grid-template-columns:1fr}.controls{flex-direction:row;overflow:auto}}
