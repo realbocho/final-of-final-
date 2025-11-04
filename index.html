@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>주식 옵션 시뮬레이터</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdn.plot.ly/plotly-2.24.1.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📊 주식 옵션 시뮬레이터</h1>
+      <p>삼성전자 · SK하이닉스 · LG — 과거 데이터 기반 시뮬레이션</p>
+    </header>
+
+    <main>
+      <section class="controls">
+        <div>
+          <label>종목</label>
+          <select id="tickerSelect">
+            <option value="samsung">삼성전자</option>
+            <option value="sk">SK하이닉스</option>
+            <option value="lg">LG</option>
+          </select>
+        </div>
+
+        <div>
+          <label>옵션 유형</label>
+          <select id="optionType">
+            <option value="call">콜 (오를 것)</option>
+            <option value="put">풋 (내릴 것)</option>
+          </select>
+        </div>
+
+        <div>
+          <label>만기(일)</label>
+          <input id="days" type="number" value="30" min="1" max="365" />
+        </div>
+
+        <div>
+          <label>행사가격</label>
+          <input id="strike" type="number" />
+        </div>
+
+        <div>
+          <label>투자금(원)</label>
+          <input id="investment" type="number" value="1000000" step="1000" />
+        </div>
+
+        <div class="buttons">
+          <button id="calcBtn">계산</button>
+          <button id="playBtn">애니메이션 실행</button>
+          <button id="stopBtn" disabled>정지</button>
+        </div>
+      </section>
+
+      <section class="outputs">
+        <div id="chart" class="chart"></div>
+        <div id="simChart" class="chart"></div>
+        <div id="summary" class="summary"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>교육용 시뮬레이터 — 거래 수수료/슬리피지 미반영</p>
+    </footer>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
